@@ -181,6 +181,7 @@ function App() {
     }
   };
 
+  // JSX to render the component
   return (
     <div className="App">
       <header className="App-header">

@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import './Board.css';
 
+// Board component representing the game board for each player
 function Board({ player, isCurrentPlayer, onButtonClick, onWithdraw }) {
+
+  // State to manage the visibility of the previous games list
   const [showGames, setShowGames] = useState(false);
 
+  // Function to toggle the visibility of the previous games list
   const toggleShowGames = () => {
     setShowGames(!showGames);
   };
 
+  //Returning JSX to Render the Player's Board
   return (
     <div className={`board ${isCurrentPlayer ? 'current' : 'dimmed'}`}>
       <h2>{player.name}</h2>

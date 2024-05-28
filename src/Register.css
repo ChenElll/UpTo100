@@ -1,0 +1,26 @@
+.register {
+    margin: 20px;
+  }
+  
+  .register form {
+    margin-bottom: 20px;
+  }
+  
+  .register label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .register button {
+    margin-top: 10px;
+  }
+  
+  .register ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .register li {
+    margin-bottom: 5px;
+  }
+  

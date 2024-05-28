@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Board.css';
 
-function Board({ player, isCurrentPlayer, onButtonClick }) {
+function Board({ player, isCurrentPlayer, onButtonClick, onWithdraw }) {
   const [showGames, setShowGames] = useState(false);
 
   const toggleShowGames = () => {
@@ -22,6 +22,9 @@ function Board({ player, isCurrentPlayer, onButtonClick }) {
             {operation}
           </button>
         ))}
+        <button onClick={onWithdraw} disabled={!isCurrentPlayer}>
+          Withdraw
+        </button>
       </div>
       <button className="toggle-games-button" onClick={toggleShowGames}>
         {showGames ? 'Hide Games' : 'Show Games'}

@@ -121,6 +121,17 @@ function App() {
     setPlayers(updatedPlayers);
   };
 
+  const handleWithdraw = () => {
+    const newPlayers = [...players];
+    newPlayers.splice(currentPlayerIndex, 1);
+    setPlayers(newPlayers);
+    if (newPlayers.length > 0) {
+      setCurrentPlayerIndex(currentPlayerIndex % newPlayers.length);
+    } else {
+      setIsGameStarted(false);
+    }
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -136,6 +147,7 @@ function App() {
               player={player}
               isCurrentPlayer={currentPlayerIndex === index}
               onButtonClick={handleButtonClick}
+              onWithdraw={handleWithdraw}
             />
           ))}
         </div>
